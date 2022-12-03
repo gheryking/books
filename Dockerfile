@@ -1,6 +1,6 @@
 # Pull base image
 
-From python:3.10.8
+FROM python:3.10.8
 
 
 # Set environment variables

@@ -1,11 +1,12 @@
 {% extends '_base.html' %}
+{% load static %}
 
 
 {% block title %} Home {% endblock title %}
 
 {% block content %}
     <h1> Homepage </h1>
-
+    <img class="GLAcover" src="{% static 'images/GLA.png' %}" alt="">
 {% if user.is_authenticated %}
     HI {{ user.email }} !
     <p><a href="{% url 'logout' %}">Log Out</a></p>
