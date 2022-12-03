@@ -19,10 +19,12 @@ from django.urls import path, include
 from users.views import SignupPageView
 
 urlpatterns = [
+    #Django-admin
     path('admin/', admin.site.urls),
     
     #User management
-    path('accounts/', include('django.contrib.auth.urls')),
+    #path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('allauth.urls')),
     
     #local apps
     path('accounts/', include('users.urls')), #new
