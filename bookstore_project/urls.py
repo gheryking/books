@@ -29,6 +29,7 @@ urlpatterns = [
     #local apps
     path('accounts/', include('users.urls')), #new
     path('', include('pages.urls')), 
+    path('books/', include('books.urls')),
     
     path('prueba/', SignupPageView.as_view(), name='prueba')
 ]
