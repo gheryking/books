@@ -30,9 +30,10 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     
     #local apps
-    path('accounts/', include('users.urls')), #new
+    #path('accounts/', include('users.urls')), #new
+    
     path('', include('pages.urls')), 
     path('books/', include('books.urls')),
-    
+    path('orders/', include('orders.urls')),
     path('prueba/', SignupPageView.as_view(), name='prueba')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # new
